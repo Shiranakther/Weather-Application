@@ -52,6 +52,11 @@ async function getWeatherData(cityValue){
             console.log(countryData)
             document.querySelector('.district').innerHTML = `${cityValue} ,`;
             document.querySelector('.country').innerHTML = countryData;
+            cityInputEl.value = '';
+        
+            const date = new Date();
+            // document.querySelector('current-day').innerHTML = date.getDay();
+            console.log(date.getDate())
             
     }catch{
         console.log('error occurd');

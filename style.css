@@ -89,6 +89,10 @@ body{
         margin-left: 15px;
         cursor: pointer;
     }
+    button:hover{
+        background-color: #0F6AB4;
+       
+    }
     .location{
         display:flex;
         flex-direction:row;
