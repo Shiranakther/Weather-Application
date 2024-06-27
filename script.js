@@ -1,5 +1,3 @@
-
-
 const apikey = "4bf9326188d743548d89f8556d701a37"
 const weatherDataEl  = document.getElementById('weather-data')
 const cityInputEl = document.getElementById('city-input');
@@ -55,8 +53,14 @@ async function getWeatherData(cityValue){
             cityInputEl.value = '';
         
             const date = new Date();
-            // document.querySelector('current-day').innerHTML = date.getDay();
-            console.log(date.getDate())
+            document.querySelector('current-day').innerHTML = date.toLocaleString('en',{weekday:'long'});
+            const year = date.getFullYear();
+            const month = date.toLocaleString('en',{
+                month:'long'
+            });
+            const day_number = date.getDate();
+
+            document.querySelector('.current-date').innerHTML = `${day_number} ${month} ${year}`;
             
     }catch{
         console.log('error occurd');
